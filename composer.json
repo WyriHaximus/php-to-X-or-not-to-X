@@ -11,17 +11,22 @@
   ],
   "require": {
     "php": "^7.2",
-    "doctrine/annotations": "^1.6"
+    "cakephp/collection": "^3.6",
+    "doctrine/annotations": "^1.6",
+    "wyrihaximus/doctrine-annotation-autoloader": "^1.0"
   },
   "require-dev": {
     "api-clients/test-utilities": "^5.0"
   },
   "autoload": {
+    "psr-4": {
+      "WyriHaximus\\": "src/"
+    },
     "files": ["src/functions_include.php"]
   },
   "autoload-dev": {
     "psr-4": {
-      "WyriHaximus\\": "src/"
+      "WyriHaximus\\Tests\\": "tests/"
     }
   },
   "config": {
