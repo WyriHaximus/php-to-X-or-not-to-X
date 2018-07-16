@@ -3,19 +3,19 @@
 namespace WyriHaximus\Tests;
 
 use ApiClients\Tools\TestUtilities\TestCase;
-use function WyriHaximus\toChildProcessOrNotToChildProcess;
+use function WyriHaximus\toXOrNotToX;
 
-final class ToChildProcessOrNotToChildProcessTest extends TestCase
+final class ToXOrNotToXTest extends TestCase
 {
     public function provideTestsAndExpectedResults(): iterable
     {
         yield [
-            ToChildProcessMethod::class . '::method',
+            ToXMethod::class . '::method',
             true,
         ];
 
         yield [
-            ToNotChildProcessMethod::class . '::method',
+            ToNotXMethod::class . '::method',
             false,
         ];
     }
@@ -25,6 +25,6 @@ final class ToChildProcessOrNotToChildProcessTest extends TestCase
      */
     public function tests(string $callable, bool $expectedResult)
     {
-        self::assertSame($expectedResult, toChildProcessOrNotToChildProcess($callable));
+        self::assertSame($expectedResult, toXOrNotToX(Annot::class, $callable));
     }
 }

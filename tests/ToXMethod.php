@@ -2,8 +2,11 @@
 
 namespace WyriHaximus\Tests;
 
-final class ToNotChildProcessMethod
+final class ToXMethod
 {
+    /**
+     * @Annot()
+     */
     public function method()
     {
     }

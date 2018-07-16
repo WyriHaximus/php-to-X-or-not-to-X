@@ -5,9 +5,8 @@ namespace WyriHaximus;
 use Cake\Collection\Collection;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\Reader;
-use WyriHaximus\Annotations\ChildProcess;
 
-function toChildProcessOrNotToChildProcess(string $callable, Reader $annotationReader = null): bool
+function toXOrNotToX(string $annotation, string $callable, Reader $annotationReader = null): bool
 {
     if (!($annotationReader instanceof Reader)) {
         $annotationReader = new AnnotationReader();
@@ -20,7 +19,7 @@ function toChildProcessOrNotToChildProcess(string $callable, Reader $annotationR
             return get_class($annotation);
         })->toArray();
 
-    if (!isset($annotations[ChildProcess::class])) {
+    if (!isset($annotations[$annotation])) {
         return false;
     }
 
