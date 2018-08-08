@@ -6,7 +6,7 @@ use Cake\Collection\Collection;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\Reader;
 
-function toXOrNotToX(string $annotation, string $callable, Reader $annotationReader = null): bool
+function toXOrNotToX(string $annotation, string $callable, Reader $annotationReader = null, bool $checkClass = true): bool
 {
     if (!($annotationReader instanceof Reader)) {
         $annotationReader = new AnnotationReader();
@@ -19,9 +19,22 @@ function toXOrNotToX(string $annotation, string $callable, Reader $annotationRea
             return get_class($annotation);
         })->toArray();
 
-    if (!isset($annotations[$annotation])) {
+    if (isset($annotations[$annotation])) {
+        return true;
+    }
+
+    if ($checkClass === false) {
         return false;
     }
 
-    return true;
+    $annotations = (new  Collection($annotationReader->getClassAnnotations(new \ReflectionClass($class))))
+        ->indexBy(function (object $annotation) {
+            return get_class($annotation);
+        })->toArray();
+
+    if (isset($annotations[$annotation])) {
+        return true;
+    }
+
+    return false;
 }

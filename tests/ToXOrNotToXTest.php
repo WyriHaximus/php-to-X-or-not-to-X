@@ -12,19 +12,33 @@ final class ToXOrNotToXTest extends TestCase
         yield [
             ToXMethod::class . '::method',
             true,
+            true,
+        ];
+
+        yield [
+            ToXClass::class . '::method',
+            true,
+            true,
+        ];
+
+        yield [
+            ToXClass::class . '::method',
+            false,
+            false,
         ];
 
         yield [
             ToNotXMethod::class . '::method',
             false,
+            true,
         ];
     }
 
     /**
      * @dataProvider provideTestsAndExpectedResults
      */
-    public function tests(string $callable, bool $expectedResult)
+    public function tests(string $callable, bool $expectedResult, bool $checkClass)
     {
-        self::assertSame($expectedResult, toXOrNotToX(Annot::class, $callable));
+        self::assertSame($expectedResult, toXOrNotToX(Annot::class, $callable, null, $checkClass));
     }
 }
