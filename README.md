@@ -1,5 +1,19 @@
-# To child process or not to child process
-Bare function using annotations to decide if the given function should be run in a child process
+# To X or not to X utils
+
+[![Build Status](https://travis-ci.com/WyriHaximus/php-to-x-or-not-to-x.svg?branch=master)](https://travis-ci.com/WyriHaximus/php-to-x-or-not-to-x)
+[![Latest Stable Version](https://poser.pugx.org/WyriHaximus/to-x-or-not-to-x/v/stable.png)](https://packagist.org/packages/WyriHaximus/to-x-or-not-to-x)
+[![Total Downloads](https://poser.pugx.org/WyriHaximus/to-x-or-not-to-x/downloads.png)](https://packagist.org/packages/WyriHaximus/to-x-or-not-to-x)
+[![Code Coverage](https://scrutinizer-ci.com/g/WyriHaximus/php-to-x-or-not-to-x/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/WyriHaximus/php-to-x-or-not-to-x/?branch=master)
+[![License](https://poser.pugx.org/WyriHaximus/to-x-or-not-to-x/license.png)](https://packagist.org/packages/WyriHaximus/to-x-or-not-to-x)
+[![PHP 7 ready](http://php7ready.timesplinter.ch/WyriHaximus/reactphp-http-middleware-clear-body/badge.svg)](https://travis-ci.org/WyriHaximus/reactphp-http-middleware-clear-body)
+
+# Install
+
+To install via [Composer](http://getcomposer.org/), use the command below, it will automatically detect the latest version and bind it with `^`.
+
+```
+composer require wyrihaximus/to-x-or-not-to-x
+```
 
 # License
 
