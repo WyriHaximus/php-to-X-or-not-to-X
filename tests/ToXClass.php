@@ -7,7 +7,7 @@ namespace WyriHaximus\Tests;
  */
 final class ToXClass
 {
-    public function method()
+    public function method(): void
     {
     }
 }
