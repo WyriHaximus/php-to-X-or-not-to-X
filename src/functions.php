@@ -12,11 +12,11 @@ function toXOrNotToX(string $annotation, string $callable, Reader $annotationRea
         $annotationReader = new AnnotationReader();
     }
 
-    list($class, $method) = explode('::', $callable);
+    list($class, $method) = \explode('::', $callable);
 
     $annotations = (new  Collection($annotationReader->getMethodAnnotations((new \ReflectionClass($class))->getMethod($method))))
         ->indexBy(function (object $annotation) {
-            return get_class($annotation);
+            return \get_class($annotation);
         })->toArray();
 
     if (isset($annotations[$annotation])) {
@@ -29,7 +29,7 @@ function toXOrNotToX(string $annotation, string $callable, Reader $annotationRea
 
     $annotations = (new  Collection($annotationReader->getClassAnnotations(new \ReflectionClass($class))))
         ->indexBy(function (object $annotation) {
-            return get_class($annotation);
+            return \get_class($annotation);
         })->toArray();
 
     if (isset($annotations[$annotation])) {

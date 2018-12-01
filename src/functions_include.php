@@ -3,7 +3,7 @@
 namespace WyriHaximus\React;
 
 // @codeCoverageIgnoreStart
-if (!function_exists('WyriHaximus\toXOrNotToX')) {
+if (!\function_exists('WyriHaximus\toXOrNotToX')) {
     require __DIR__ . '/functions.php';
 }
 // @codeCoverageIgnoreEnd

@@ -4,7 +4,7 @@ namespace WyriHaximus\Tests;
 
 final class ToNotXMethod
 {
-    public function method()
+    public function method(): void
     {
     }
 }

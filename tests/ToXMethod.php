@@ -7,7 +7,7 @@ final class ToXMethod
     /**
      * @Annot()
      */
-    public function method()
+    public function method(): void
     {
     }
 }

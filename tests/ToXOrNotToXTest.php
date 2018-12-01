@@ -5,6 +5,9 @@ namespace WyriHaximus\Tests;
 use ApiClients\Tools\TestUtilities\TestCase;
 use function WyriHaximus\toXOrNotToX;
 
+/**
+ * @internal
+ */
 final class ToXOrNotToXTest extends TestCase
 {
     public function provideTestsAndExpectedResults(): iterable
@@ -37,7 +40,7 @@ final class ToXOrNotToXTest extends TestCase
     /**
      * @dataProvider provideTestsAndExpectedResults
      */
-    public function tests(string $callable, bool $expectedResult, bool $checkClass)
+    public function tests(string $callable, bool $expectedResult, bool $checkClass): void
     {
         self::assertSame($expectedResult, toXOrNotToX(Annot::class, $callable, null, $checkClass));
     }
