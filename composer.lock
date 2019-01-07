@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dca27d166e2ca5e636d0070dfd5ae289",
+    "content-hash": "c3697e5f3cb8ef49470ff64a4d3790c2",
     "packages": [
         {
             "name": "cakephp/collection",
-            "version": "3.7.1",
+            "version": "3.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/collection.git",
