@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": "^7.2",
-    "cakephp/collection": "^3.7",
+    "cakephp/collection": "^3.7 || ^4.0",
     "doctrine/annotations": "^1.6",
     "wyrihaximus/doctrine-annotation-autoloader": "^1.0"
   },
