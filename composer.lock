@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "cakephp/collection",
-            "version": "4.0.7",
+            "version": "4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/collection.git",
-                "reference": "18393a716322585c86b46c852c396534d925926a"
+                "reference": "9193891f0e657f97bae94678275232132f858c96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/collection/zipball/18393a716322585c86b46c852c396534d925926a",
-                "reference": "18393a716322585c86b46c852c396534d925926a",
+                "url": "https://api.github.com/repos/cakephp/collection/zipball/9193891f0e657f97bae94678275232132f858c96",
+                "reference": "9193891f0e657f97bae94678275232132f858c96",
                 "shasum": ""
             },
             "require": {
@@ -50,7 +50,7 @@
                 "collections",
                 "iterators"
             ],
-            "time": "2020-04-17T08:12:09+00:00"
+            "time": "2020-07-16T19:40:36+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -5633,5 +5633,6 @@
     "platform-dev": [],
     "platform-overrides": {
         "php": "7.2"
-    }
+    },
+    "plugin-api-version": "1.1.0"
 }
